@@ -44,7 +44,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            ghcr.io/thezak48/varken
+            ghcr.io/ryanthults/varken
           flavor: |
             latest=auto
           tags: |
