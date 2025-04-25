@@ -126,6 +126,11 @@ class OverseerrAPI(object):
                         }
                     }
                 )
+        
+        if influx_payload:
+            self.dbmanager.write_points(influx_payload)
+        else:
+            self.logger.warning("No data to send to influx for overseerr-latest-request instance, discarding.")
 
     def get_issue_counts(self):
         now = datetime.now(timezone.utc).astimezone().isoformat()
