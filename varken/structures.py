@@ -199,6 +199,26 @@ class OmbiMovieRequest(NamedTuple):
     title: str = None
     watchedByRequestedUser: bool = None # May or may not work
 
+
+# Overseerr /api/v1/movie/
+class OverseerrMovieRequest(NamedTuple):
+    requested_date: str = None
+    requested_user: str = None
+    request_type: int = None
+    server: int = None
+    status: int = None
+    title: str = None
+
+
+# Overseerr /api/v1/tv/
+class OverseerrTVRequest(NamedTuple):
+    requested_date: str = None
+    requested_user: str = None
+    request_type: int = None
+    server: int = None
+    status: int = None
+    title: str = None
+
 # Overseerr /api/v1/request/count
 class OverseerrRequestCounts(NamedTuple):
     approved: int = None
